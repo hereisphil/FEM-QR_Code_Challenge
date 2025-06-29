@@ -1,7 +1,87 @@
+/* Minimal Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+/* Setup Color Variables */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+/* Given styling for attribution */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* General Styles */
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--slate-300);
+}
+
+/* Center Content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--white);
+  max-width: 300px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  border: none;
+  border-radius: 12px;
+}
+.card-copy {
+  text-align: center;
+}
+.card-copy h1 {
+  color: var(--slate-900);
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+.card-copy p {
+  color: var(--slate-500);
+  padding: 10px;
+  font-size: 15px;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
